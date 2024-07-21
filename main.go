@@ -18,7 +18,7 @@ func main() {
 
 func run() {
 	help := flag.String("H", "", "Display commands")
-	projectName := flag.String(createName, "", "Create new Go project")
+	projectName := flag.String(createName, "", "Create new Go project (required)")
 	projectPath := flag.String(createPath, defaultPath, "Path to new project")
 	flag.Parse()
 	if *help == "" {
