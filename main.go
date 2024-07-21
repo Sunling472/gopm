@@ -17,9 +17,13 @@ func main() {
 }
 
 func run() {
+	help := flag.String("H", "", "Display commands")
 	projectName := flag.String(createName, "", "Create new Go project")
 	projectPath := flag.String(createPath, defaultPath, "Path to new project")
 	flag.Parse()
+	if *help == "" {
+		flag.PrintDefaults()
+	}
 	if err := createFolder(*projectName, *projectPath); err != nil {
 		log.Fatal(err)
 	}
