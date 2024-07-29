@@ -1,0 +1,6 @@
+[
+  {
+    "label": "Gopm build",
+    "command": "go build -o ./bin/gopm ."
+  }
+]
